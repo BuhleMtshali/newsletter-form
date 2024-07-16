@@ -1,3 +1,11 @@
+:root {
+  --body-bg: hsl(235, 18%, 26%);
+  --heading-color: hsl(234, 29%, 20%);
+  --container-bg: hsl(0, 0%, 100%);
+  --error-msg-color: hsl(4, 100%, 67%);
+  --grey-text: hsl(231, 7%, 60%);
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
