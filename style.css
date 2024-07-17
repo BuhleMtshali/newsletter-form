@@ -8,4 +8,17 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: var(--body-bg);
+}
+.container {
+  width: 600px;
+  background-color: var(--container-bg);
+  margin: 0 auto;
+  border-radius: 15px;
+}
+label {
+  display: block;
+}
+input {
+  display: block;
 }
