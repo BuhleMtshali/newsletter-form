@@ -6,8 +6,16 @@ let container = document.getElementById("container");
 
 function subscribeNow(event) {
   event.preventDefault();
-  let emailRecepient = inputValueElement.value;
-  let newContent = `
+  container.innerHTML = `
+            <h1>Loading your data...</h1>
+           
+            <i class="fa-solid fa-spinner fa-spin" style="color: #ff6155;"></i>
+            
+    `;
+
+  setTimeout(function () {
+    let emailRecepient = inputValueElement.value;
+    let newContent = `
         <img src="img/icon-list.svg" class="closing-icon"/>
         <h1>
         Thanks for Subscribing!
@@ -21,7 +29,10 @@ function subscribeNow(event) {
         Dismiss message
         </button>
   `;
-  container.innerHTML = newContent;
+    container.innerHTML = newContent;
+  }, 4000);
+  let closingBtn = document.getElementById("closing-btn");
+
   container.style.display = "block";
   container.style.width = "300px";
 }
