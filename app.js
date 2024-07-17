@@ -22,11 +22,12 @@ function subscribeNow(event) {
     let emailRecepient = inputValueElement.value;
     let newContent = `
         <img src="img/icon-list.svg" class="closing-icon"/>
-        <h1>
+        <h1 class="thanks-heading">
         Thanks for Subscribing!
         </h1>
-        <p class="text">
-        A confirmation email has been sent to ${emailRecepient}. 
+        <p class="text confirm-text">
+        A confirmation email has been sent to
+         <span class="bold"> ${emailRecepient}</span>. 
         Please open it and click<br/> the button
         inside to confirm your subscription.
         </p>
@@ -34,6 +35,9 @@ function subscribeNow(event) {
         Dismiss message
         </button>
   `;
+
+    container.style.textAlign = "left";
+
     container.innerHTML = newContent;
     let closingBtn = document.getElementById("closing-btn");
     closingBtn.addEventListener("click", resetNow);

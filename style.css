@@ -41,6 +41,20 @@ label {
 input {
   display: block;
 }
+
+.bold {
+  font-weight: 700;
+}
+
+.thanks-heading {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.confirm-text {
+  margin-bottom: 15px;
+}
+
 h1 {
   font-weight: 700;
   margin-top: 5px;
