@@ -11,11 +11,11 @@ body {
   background-color: var(--body-bg);
 }
 .container {
-  width: 600px;
+  width: 650px;
   height: 400px;
-  padding: 25px;
+  padding: 18px;
   background-color: var(--container-bg);
-  margin: 0 auto;
+  margin: 40px auto;
   border-radius: 15px;
   color: var(--heading-color);
   display: flex;
@@ -27,18 +27,33 @@ label {
 input {
   display: block;
 }
-ul {
-  padding-left: 10px;
-  text-align: left;
-  list-style-image: url(img/icon-list.svg);
-  margin-top: 0;
+h1 {
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 2.5em;
 }
-.text {
+ul {
+  list-style-type: none;
+  padding-left: 0px;
   margin-bottom: 5px;
 }
-li::marker {
-  width: 15px;
-  height: 15px;
+li {
+  display: flex;
+  padding-bottom: 8px;
+}
+ul li::before {
+  content: url(img/icon-list.svg);
+  padding-right: 15px;
+}
+.text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+*:focus {
+  outline: none;
 }
 img {
   width: 100%;
@@ -52,4 +67,30 @@ img {
 }
 .left-container {
   width: 100%;
+  text-align: left;
+  padding-right: 10px;
+}
+.email-label {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+input {
+  width: 87%;
+  padding: 12px 16px;
+  border: 2px solid var(--grey-text);
+  border-radius: 9px;
+  margin-bottom: 15px;
+  cursor: grab;
+}
+button {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 9px;
+  border: none;
+  color: var(--container-bg);
+  background-color: var(--body-bg);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
 }
