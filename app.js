@@ -4,6 +4,8 @@ let submitBtn = document.getElementById("submit-btn");
 let emailName = document.getElementById("input-value");
 let container = document.getElementById("container");
 
+const originalContent = container.innerHTML;
+
 function subscribeNow(event) {
   event.preventDefault();
   container.innerHTML = `
@@ -33,11 +35,17 @@ function subscribeNow(event) {
         </button>
   `;
     container.innerHTML = newContent;
+    let closingBtn = document.getElementById("closing-btn");
+    closingBtn.addEventListener("click", resetNow);
   }, 6000);
-  let closingBtn = document.getElementById("closing-btn");
-
   container.style.display = "block";
   container.style.width = "300px";
+}
+
+function resetNow() {
+  container.innerHTML = originalContent;
+  container.style.display = "flex";
+  container.style.width = "650px";
 }
 
 formElement.addEventListener("submit", subscribeNow);
