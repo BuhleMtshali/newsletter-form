@@ -71,6 +71,16 @@ i {
   font-weight: bold;
   text-align: center;
 }
+
+.loading-heading {
+  margin-bottom: 15px;
+}
+.loading-text {
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
 *:focus {
   outline: none;
 }

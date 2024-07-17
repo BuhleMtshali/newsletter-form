@@ -7,11 +7,14 @@ let container = document.getElementById("container");
 function subscribeNow(event) {
   event.preventDefault();
   container.innerHTML = `
-            <h1>Loading your data...</h1>
-           
+            <h1 class="loading-heading">Loading your data...</h1>
             <i class="fa-solid fa-spinner fa-spin" style="color: #ff6155;"></i>
+            <p class="text loading-text">
+            Please wait while we load your data to the system...
+            </p>
             
     `;
+  container.style.textAlign = "center";
 
   setTimeout(function () {
     let emailRecepient = inputValueElement.value;
@@ -30,7 +33,7 @@ function subscribeNow(event) {
         </button>
   `;
     container.innerHTML = newContent;
-  }, 4000);
+  }, 6000);
   let closingBtn = document.getElementById("closing-btn");
 
   container.style.display = "block";
